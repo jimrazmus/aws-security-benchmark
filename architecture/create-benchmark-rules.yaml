@@ -361,7 +361,12 @@
             - AWS::RDS::DBSubnetGroup
             - AWS::RDS::EventSubscription
         InputParameters:
-          tag1Key: CostCenter
+          tag1Key: division
+          tag2Key: department
+          tag3Key: owner
+          tag4Key: service
+          tag5Key: env
+          tag6Key: data_class
         Source:
           Owner: AWS
           SourceIdentifier: REQUIRED_TAGS
