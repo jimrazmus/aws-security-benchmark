@@ -1529,7 +1529,7 @@
                 for route_table in boto3.client('ec2').describe_route_tables(RouteTableIds=[route_table_id])['RouteTables']:
                     for route in route_table['Routes']:
                         if 'VpcPeeringConnectionId' in route:
-                            if int(str(route['DestinationCidrBlock']).split("/", 1)[1]) < 24:
+                            if int(str(route['DestinationCidrBlock']).split("/", 1)[1]) < 17:
                                 is_compliant = False
                                 annotation = 'VPC peered route table has a large CIDR block destination.'
 
